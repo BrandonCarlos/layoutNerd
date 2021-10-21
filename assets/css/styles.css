@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&family=Lexend+Deca:wght@100;300;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+}
+
+:root {
+  --color-purple: #8257E6;
+  --color-black: #13131F;
+  --color-gray: #282830;
+  --color-gray-white: #C4C4C4;
+  --color-white: #FEFBFB;
+  --color-primary-white: #212429;
+  --color-primary-black: #FFFFFF;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {  
+  width: 100%;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+.main-content {
+  max-width: 112rem;
+  margin: 2.6rem auto 0;
+}
+
+.header {
+  min-height: 100vh;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 11.4rem;
+}
+
+.logo,
+.footer h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 400;
+  color: var(--color-purple);
+}
+
+.lista {
+  display: flex;
+  align-items: center;
+}
+
+.lista li a {
+  margin-right: 6rem;
+  color: var(--color-white);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.lista li:last-child a {
+  margin-right: 0;
+}
+
+.lista li a::after {
+  content: '';
+  position: absolute;
+  height: .2rem;
+  width: 0%;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--color-purple);
+  transition: width 700ms ease-in-out;
+}
+
+.lista li a:hover::after {
+  width: 100%;
+}
+
+.lista li:last-child a{
+  display: inline-block;
+  padding: .6rem 2rem;
+  border: 1px solid var(--color-purple);
+  border-radius: 3rem;
+  transition: none;
+}
+
+.lista li:last-child a:hover::after {
+  content: none;
+}
+
+/* Section NERD */
+.world-nerd-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.world-nerd-flex-title {
+  max-width: 30.8rem; 
+  margin-bottom: 1.1rem;
+}
+
+.world-nerd-flex h1 {
+  font-size: 4.8rem;
+  color: var(--color-white);
+  font-weight: 400;
+  line-height: 6rem;
+}
+
+.description-nerd {
+  max-width: 49.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  color: var(--color-gray-white);
+  margin-bottom: 8rem;
+}
+
+/* Nerd GRID */
+.word-nerd-grid,
+.artigo-noticias {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(33.8rem, 76.1rem));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.fundo {
+  height: 35rem;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .8) 100%), url('/assets/img/fundo\ batalha.jpg');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  grid-column: 1 / 3;
+}
+
+.fundo .titulo p,
+.card .titulo p {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding: .4rem 1.8rem;
+  background-color: var(--color-purple);
+  border-radius: .3rem;
+}
+
+.fundo .titulo-descricao p {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+.fundo.fire {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8) 100%), url('/assets/img/fire.jpg');
+  margin-bottom: 2rem;
+}
+
+.fundo.robots {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .8) 100%), url('/assets/img/robots.jpg');
+}
+
+.fundo.fire .titulo p,
+.fundo-robots .titulo p,
+.card .titulo p {
+  font-size: 1.2rem;
+  padding: .3rem 1.6rem;
+}
+
+.fundo.fire .titulo-descricao p,
+.fundo.robots .titulo-descricao p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.fundo.fire,
+.fundo.robots {
+  height: 16.5rem;
+  grid-column: 3 / 4;  
+}
+
+
+/* OUTRO GRID DE ARTIGOS */
+.artigo-noticias {
+  grid-template-columns: repeat(3, minmax(33.8rem, 76.1rem));
+}
+
+.article {
+  height: 89.4rem;
+  overflow-y: scroll;
+  grid-column: 1 / 3;
+}
+
+.artigo {
+  display: flex;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.artigo::after {
+  content: 'Lorem';
+  position: absolute;
+  height: 1.5rem;
+  width: 6rem;
+  top: 1rem;
+  left: 1rem;
+  border-radius: .3rem;
+  background: var(--color-purple);
+  text-align: center;
+}
+
+.artigo-img {
+  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8) 100%);
+  max-width: 20rem;
+  height: 15.1rem;
+  margin-right: 1.8rem;
+  cursor: pointer;
+}
+
+.artigo-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.artigo-descricao {
+  max-width: 39.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.artigo-descricao p:first-child {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.artigo-descricao p:nth-child(2),
+.artigo-descricao button {
+  max-width: 33rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--color-gray-white);
+  margin: 1rem 0 .6rem 0;
+}
+
+.artigo-descricao p.data {
+  font-size: 1rem;
+  color: var(--color-gray-white);
+  margin-bottom: 1.2rem;
+}
+
+.artigo-descricao button {
+  line-height: 2rem;
+  color: var(--color-white);
+  margin: .9rem 0 0 0;
+  padding: .3rem 2.2rem;
+  background-color: var(--color-purple);
+  border-radius: .3rem;
+}
+
+
+.article::-webkit-scrollbar {
+  width: .8rem;
+}
+
+.article::-webkit-scrollbar-thumb {
+  background: var(--color-purple);
+  /* border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed; */
+}
+
+.article::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+
+/* Noticias ASIDE */
+.noticias-aside h1 {
+  font-size: 2.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  position: relative;
+}
+
+.noticias-aside h1::after {
+  content: '';
+  position: absolute;
+  height: .3rem;
+  width: 25rem;
+  background-color: var(--color-purple);
+  bottom: -1.3rem;
+  left: 0;
+}
+
+.fundo.azul,
+.fundo.cena,
+.fundo.god-of-war {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8) 100%), url('/assets/img/A-Viagem-de-Chihiro-chihiro-e-haku\ 1.jpg');
+  background-size: cover;
+  height: 25rem;
+  margin-top: 2.7rem;
+  margin-bottom: 4.7rem;
+}
+
+.fundo.cena {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/cena-do-filme-a-rede-social-2010-1547503577708_v2_1920x1204\ 1.jpg');
+}
+
+.fundo.god-of-war {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/godofwar.jpg');
+  background-size: cover;
+}
+
+.fundo.azul .titulo-descricao p,
+.fundo.cena .titulo-descricao p,
+.fundo.god-of-war .titulo-descricao p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+/* Noticias recentes */
+.grid-noticias-recentes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33.8rem, 1fr));
+  gap: 5.2rem;
+  margin-top: 5.5rem;
+}
+
+.noticia-recente-titulo {
+  grid-column: 1 / 4;
+}
+
+
+.noticia-recente-titulo h3 {
+  font-size: 2.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  position: relative;
+}
+
+.noticia-recente-titulo h3::after {
+  content: '';
+  height: .3rem;
+  width: 25rem;
+  background: var(--color-purple);
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+}
+
+.card {
+  max-width: 33.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card.anime,
+.card.gta,
+.card.thor,
+.card.desenho,
+.card.nuvem,
+.card.game {
+  height: 25rem;
+  max-width: 33.8rem;
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/Vidas-ao-Vento-Naoko.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.card.gta {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/GTA-5-PlayStation-5-Rockstar-Games-Sony-2020.jpg');
+}
+
+.card.thor {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/Vikings-Série-Derivada.jpg');
+}
+
+.card.desenho {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/soul-disney-pixar-1220-1400x800-5.jpg');
+}
+
+.card.nuvem {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/nuvem.jpg');
+}
+
+.card.game {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8) 100%), url('/assets/img/game.jpg');
+} 
+
+.card .titulo p {
+  padding: .3rem 1.6rem;
+  font-size: 1.2rem;
+}
+
+.card .titulo-descricao p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: var(--color-white);
+}
+
+.footer {
+  max-width: 50rem;
+  text-align: center;
+  margin: 9.5rem auto 4rem;
+}
+
+.footer h2 {
+  margin-bottom: 1.6rem;
+}
+
+.footer p {
+  font-family: 'Inter';
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+[data-anime="scroll"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 300ms ease-in-out;
+}
+
+[data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0px, 0, 0);
+}
+
+[data-tab="content"] {
+  display: none;
+}
+
+[data-tab="content"].ativo {
+  display: block;
+  animation: show 700ms forwards ease-in-out;
+}
+
+[data-tab="content"].ativo.show-right {
+  animation: show-right 700ms forwards ease-in-out;
+}
+
+[data-tab="content"].ativo.show-down {
+  animation: show-down 700ms forwards ease-in-out;
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* MODAL */
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  display: none;
+}
+
+.modal-container.ativo {
+  display: flex;
+}
+
+.modal {
+  min-width: 50rem;
+  background: white;
+  padding: 4rem;
+  border: 1rem solid var(--color-purple);
+  box-shadow: 0 0 0 1rem white;
+  position: relative;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ativo .modal {
+  animation: modal 600ms forwards;
+}
+
+.fechar {
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  width: 5rem;
+  height: 5rem;
+  border: .4rem solid white;
+  border-radius: 50%;
+  box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, .3);
+  background: var(--color-purple);
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.modal label {
+  font-family: 'Inter', sans-serif;
+  display: block;
+  font-weight: bold;
+  margin: 1rem 0 .5rem 0;
+  color: var(--color-purple);
+  font-size: 1.5rem;
+}
+
+.modal input {
+  width: 100%;
+  padding: .7rem .5rem;
+}
+
+.modal button[type="submit"] {
+  display: block;
+  background: var(--color-purple);
+  border-radius: .4rem;
+  padding: .7rem 2rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin-top: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
